@@ -1,2 +1,5 @@
 #!/bin/bash
-python3 $PYCODE
+echo  "#!/usr/bin/python3">tex.py
+echo $PYCODE >> tex.py
+export PYCODE=tex.py
+python $PYCODE
