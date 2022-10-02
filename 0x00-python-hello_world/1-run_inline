@@ -1,4 +1,2 @@
 #!/bin/bash
-echo $PYCODE >> tex.py
-export PYCODE=tex.py
-python $PYCODE
+python3 $PYCODE
