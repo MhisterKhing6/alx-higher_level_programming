@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-start = 'a'
-count = 1
+count = ord('a')
 while count <= ord('z'):
-    count = ord(start)
-    print(start)
+    print(chr(count),end="")
     count += 1
-    start = chr(count)
+
