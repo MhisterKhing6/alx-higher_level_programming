@@ -1,17 +1,31 @@
 #!/usr/bin/python3
+
+#!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-determer = 1
-Ldigit = 1
 if number < 0:
-    number *= -1
-    determer = -1
-Ldigit = number % 10
-Lmessage = f" Last digit of {number*determer} is {Ldigit*determer} "
-
-if Ldigit > 5:
-    print(f"{Lmessage } and is greater than 5")
-elif Ldigit == 0:
-    print(f"{Lmessage} and is 0")
+    last_digit = ((number * -1) % 10) * -1
 else:
-    print(f"{Lmessage} and is less than 6 and not 0")
+    last_digit = number % 10
+print(f"Last digit of {number:d} is {last_digit:d} and is", end=" ")
+if last_digit > 5:
+    print("greater than 5")
+elif last_digit == 0:
+    print("0")
+else:
+    print("less than 6 and not 0")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
