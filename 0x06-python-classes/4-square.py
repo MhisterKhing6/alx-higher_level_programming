@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 class Square:
     """ define __init__ function """
     def __init__(self, size=0):
