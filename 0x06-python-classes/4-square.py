@@ -1,9 +1,22 @@
+
 #!/usr/bin/python3
+""" define a class Square """
+
+
 class Square:
     """ define __init__ function """
     def __init__(self, size=0):
         """ initializes size of self with size """
-        self.size = size
+        """ if statement """
+        if type(value) is not int:
+            """ raise error """
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            """ raise error """
+            raise ValueError("size must be >= 0")
+        else:
+            """ initialize """
+            self.__size = value
 
     @property
     def size(self):
