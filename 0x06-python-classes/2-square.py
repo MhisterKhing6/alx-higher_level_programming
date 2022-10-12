@@ -1,15 +1,17 @@
 #!/usr/bin/python3
-"""Creates a square class and defines it using its base"""
+""" defines a class named Square """
 
 
 class Square:
-    """A square class with bass as only form of definition"""
-
+    """ defines a function named __init__ """
     def __init__(self, size=0):
-        """initialize to size variable"""
+        """ if statement """
         if type(size) != int:
+            """ raise an error """
             raise TypeError("size must be an integer")
         elif size < 0:
-            raise ValueError("size must b e >= 0")
+            """ raise an error """
+            raise ValueError("size must be >= 0")
         else:
+            """ initialize __size of self with size """
             self.__size = size
