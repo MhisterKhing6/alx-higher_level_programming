@@ -3,4 +3,6 @@
 
 
 class Square:
+    """A square class with bass as only form of definition"""
     __square
+    pass
