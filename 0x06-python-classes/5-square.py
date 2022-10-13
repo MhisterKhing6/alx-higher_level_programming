@@ -12,7 +12,6 @@ class Square:
     def size(self):
         """ returns __size of self """
         return self.__size
-
     @size.setter
     def size(self, value):
         """ if statement """
@@ -38,3 +37,4 @@ class Square:
                 for j in range(self.__size):
                     print("#", end="")
                 print()
+                
