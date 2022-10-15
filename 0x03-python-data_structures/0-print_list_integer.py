@@ -6,4 +6,5 @@
 def print_list_integer(my_list=[]):
     """"print the vlues in my_list"""
     for x in my_list:
-        print(x)
+
+        print("{}".format(x))
