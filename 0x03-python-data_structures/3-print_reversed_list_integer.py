@@ -4,7 +4,8 @@
 
 
 def print_reversed_list_integer(my_list=[]):
+    lenght = len(my_list) - 1
     """"print the vlues in reverse order"""
-    for x in range(len(my_list) - 1, -1, -1):
-
-        print("{:d}".format(my_list[x]))
+    while lenght >= 0:
+        print("{:d}".format(my_list[lenght]))
+        lenght -= 1
