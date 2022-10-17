@@ -1,0 +1,30 @@
+
+>>> addbar= __import__("0-add_integer").add_integer
+
+
+Testing for positive numbers:
+>>> addbar(22,33)
+55
+
+>>> addbar(2,3)
+5
+
+
+Testing for positive and negative numbers:
+>>> addbar(22,-10)
+12
+
+Testing for both negative numbers:
+>>> addbar(-2,-3)
+-5
+>>> addbar("how",24)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> addbar("23","how") # doctest: +IGNORE_EXCEPTION_DETAIL +ELLIPSIS
+Traceback (most recent call last):
+        ...
+TypeError: a must be an integer
+
+
