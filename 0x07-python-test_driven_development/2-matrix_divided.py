@@ -21,7 +21,6 @@ def matrix_divided(matrix, div):
                 raise TypeError("matrix must be a matrix "
                                 "(list of lists) of integers/floats")
             else:
-                copyrow.append(round(row[i]/div,2))
+                copyrow.append(round(row[i]/div, 2))
         compyMatrix.append(copyrow)
     return compyMatrix
-
