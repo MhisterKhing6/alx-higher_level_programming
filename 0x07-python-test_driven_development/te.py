@@ -1,3 +1,3 @@
 
 import doctest
-doctest.testfile("4-print_square.txt")
+doctest.testfile("5-text_identation.txt")

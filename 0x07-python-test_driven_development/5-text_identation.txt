@@ -1,0 +1,11 @@
+>>> am = __import__("5-text_indentation").text_indentation
+
+
+
+>>> am(0)    # doctest: +IGNORE_EXCEPTION_DETAIL +ELLIPSIS
+Traceback (most recent call last):
+        ...
+TypeError: text must be a string
+
+
+
