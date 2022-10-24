@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Creates a class for integer representation"""
 class MyInt(int):
     """MyInt: An integer class"""
     def __eq__(self, other):
