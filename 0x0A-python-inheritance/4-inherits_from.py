@@ -3,16 +3,14 @@
 
 
 def inherits_from(obj, a_class):
+    """
+    inherits_from: checks if an object inherist from a class
+    :param obj: an object to check
+    :param a_class: a class for comparison
+    :return: true or false is the class match the object
+    """
     if type(obj) == a_class:
         return False
     else:
         return issubclass(type(obj), a_class)
 
-
-a = True
-if inherits_from(a, int):
-    print("{} inherited from class {}".format(a, int.__name__))
-if inherits_from(a, bool):
-    print("{} inherited from class {}".format(a, bool.__name__))
-if inherits_from(a, object):
-    print("{} inherited from class {}".format(a, object.__name__))
