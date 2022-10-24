@@ -1,38 +1,23 @@
+#
+
 #!/usr/bin/python3
-"""Creates an empty baseGeo class"""
-
-
-class BaseGeometry:
-    def area(self):
-        """Area with exception"""
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        if type(value) != int:
-            raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{} must be  greater than 0".format(name))
-
-
-class Rectangle(BaseGeometry):
-    def __init__(self, width, height):
-        super(Rectangle, self).__init__()
-        super().integer_validator("width", width)
-        super().integer_validator("height", height)
-        self.__width = width
-        self.__height = height
-
-    def area(self):
-        return self.__width * self.__height
-
-    def __str__(self):
-        return "[Rectangle] {}/{}".format(self.__width, self.__height)
+"""
+8-rectangle module
+"""
+Rectangle =  __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
+    """square: Create another geom class for square representation"""
     def __init__(self, size):
+        """__init__:initialize square with size
+        :arg
+        :param size: size of square"""
         super().__init__(size, size)
         self.__size = size
 
     def __str__(self):
+        """__str__: Returns the string representation of the class
+        :return: A string of the class"""
         return "[Square] {}/{}".format(self.__size, self.__size)
+
