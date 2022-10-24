@@ -1,11 +1,20 @@
->>> MyList =  __import__('1-my_list').MyList
+1-my_list
+=========
 
->>> myList = MyList()
->>> myList.append(2)
->>> myList.append(33)
->>> print(myList)
-[2, 33]
->>> myList.print_sorted()
-[2, 33]
+importing class:
+	>>> MyList = __import__('1-my_list').MyList
 
+checking for module docstring:
+	>>> m = __import__('1-my_list').__doc__
+	>>> len(m) > 1
+	True
 
+checking for class docstring:
+	>>> c = __import__('1-my_list').MyList.__doc__
+	>>> len(c) > 1
+	True
+
+checking for method docstring:
+	>>> f = __import__('1-my_list').MyList.print_sorted.__doc__
+	>>> len(f) > 1
+	True
