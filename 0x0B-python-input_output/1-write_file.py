@@ -7,6 +7,6 @@ def write_file(filename="", text=""):
     :arg
     :param filename: Path to file to write
     :param text: what to write to filename
-    :return: Nothing"""
+    :return: number of characters added"""
     with open(filename, "w", encoding='utf-8') as file:
         return file.write(text)
