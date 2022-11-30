@@ -1,5 +1,4 @@
 --select the top average temp in july and Auguest
-USE hbtn_0c_0;
 SELECT city, AVG(value) AS avg_temp
 FROM temperatures
 WHERE month = 8 OR month = 7

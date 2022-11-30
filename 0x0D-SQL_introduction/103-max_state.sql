@@ -1,5 +1,5 @@
 --select the maximum temperatures from each stat
-USE hbtn_0c_0;
 SELECT state, MAX(value)
 FROM temperatures
-GROUP BY state;
+GROUP BY state
+ORDER BY state ASC;
