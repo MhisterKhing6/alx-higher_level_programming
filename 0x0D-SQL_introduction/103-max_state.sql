@@ -1,5 +1,5 @@
 --select the maximum temperatures from each stat
-SELECT state, MAX(value)
-FROM temperatures
-GROUP BY state
-ORDER BY state ASC;
+SELECT `state`, MAX(`value`)
+FROM `temperatures`
+GROUP BY `state`
+ORDER BY `state` ASC;
