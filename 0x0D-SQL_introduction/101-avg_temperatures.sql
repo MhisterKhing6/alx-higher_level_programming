@@ -1,5 +1,6 @@
 --Find the average temperature of each city
-USE `hbtn_0c_0`
-select city, AVG(value) as avg_temp
+USE hbtn_0c_0
+SELECT city, AVG(value) AS avg_temp
 FROM temperatures
-GROUP BY city;
+GROUP BY city
+ORDER BY avg_temp DESC;;
