@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 import { argv } from 'node:process';
 if (Number(argv[2])) {
   for (let i = 0; i < parseInt(argv[2]); i++) {
