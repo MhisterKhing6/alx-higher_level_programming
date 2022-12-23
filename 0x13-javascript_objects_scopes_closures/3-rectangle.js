@@ -9,8 +9,13 @@ class Rectangle {
   }
 
   print () {
+    let str = '#';
     for (let i = 0; i < this.height; i++) {
-      console.log('#'.repeat(this.width));
+      for (let j = 0; j < (this.width - 1); j++) {
+        str += '#';
+      }
+      console.log(str);
+      str = '#';
     }
   }
 }
