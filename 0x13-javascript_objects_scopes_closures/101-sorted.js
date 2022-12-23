@@ -5,10 +5,10 @@ for (const value of Object.values(dict)) {
   const ls = [];
   for (const key of Object.keys(dict)) {
     if (value === dict[key]) {
-      ls.push(key);
+      ls.push(key.toString());
     }
   }
-  newdict[value] = ls;
+  newdict[value.toString()] = ls;
 }
 console.log(dict);
 console.log(newdict);
