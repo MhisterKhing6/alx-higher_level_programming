@@ -19,5 +19,5 @@ if __name__ == '__main__':
                    FROM cities inner join states
                    ON states.id = cities.state_id AND states.name = BINARY %s
                    ''', (sys.argv[4], ))
-    new = [x[0] for x in cursor.fetchall(11)]
+    new = [x[0] for x in cursor.fetchall()]
     print(', '.join(new))
