@@ -3,7 +3,7 @@
 """
     Python MySQLdb introduction
     Select all states from the states database
-    where states name begin with N
+    where states name is equal to user inputs
 """
 if __name__ == '__main__':
     import sys
@@ -16,8 +16,8 @@ if __name__ == '__main__':
     cursor = connect.cursor()
     cursor.execute('''
                    SELECT * from states
-                   WHERE states.name LIKE BINARY ('N%')
-                   ''')
+                   WHERE states.name = '{}'
+                   '''.format(sys.argv[4]))
     rows = cursor.fetchall()
     for row in rows:
         print(row)
