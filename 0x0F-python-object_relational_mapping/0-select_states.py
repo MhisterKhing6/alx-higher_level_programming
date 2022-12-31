@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-""" Select all states from cities using MySQLdb"""
+
+"""
+    Python MySQLdb introduction
+    Select all states from the states database
+   """
 import sys
 import MySQLdb
 
