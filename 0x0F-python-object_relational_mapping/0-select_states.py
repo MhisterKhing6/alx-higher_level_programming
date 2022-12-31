@@ -1,6 +1,5 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """ Select all states from cities using MySQLdb"""
-
 import sys
 import MySQLdb
 
