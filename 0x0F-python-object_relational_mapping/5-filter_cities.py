@@ -15,9 +15,9 @@ if __name__ == '__main__':
     #  get a cursor
     cursor = connect.cursor()
     cursor.execute('''
-                   SELECT cities.name 
-                   FROM cities inner join states 
+                   SELECT cities.name
+                   FROM cities inner join states
                    ON states.id = cities.state_id AND states.name = BINARY %s
                    ''', (sys.argv[4], ))
-    new = [x[0] for x in cursor.fetchall()]
+    new = [x[0] for x in cursor.fetchall(11)]
     print(', '.join(new))
