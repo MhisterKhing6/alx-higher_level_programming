@@ -16,7 +16,7 @@ if __name__ == '__main__':
     cursor = connect.cursor()
     cursor.execute('''
                    SELECT * from states
-                   WHERE states.name = '{}'
+                   WHERE states.name = BINARY '{}'
                    '''.format(sys.argv[4]))
     rows = cursor.fetchall()
     for row in rows:
