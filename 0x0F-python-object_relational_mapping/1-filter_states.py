@@ -15,7 +15,7 @@ if __name__ == '__main__':
     cursor = connect.cursor()
     cursor.execute('''
                    SELECT * from states
-                   WHERE states.name like('N%')
+                   WHERE states.name LIKE BINARY ('N%')
                    ''')
     rows = cursor.fetchall()
     for row in rows:
