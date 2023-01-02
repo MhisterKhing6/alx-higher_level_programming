@@ -1,4 +1,4 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 """Creates a base class that mapes a table"""
 
 from sqlalchemy import create_engine, Column, Integer, String
