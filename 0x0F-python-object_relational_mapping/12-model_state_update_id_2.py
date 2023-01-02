@@ -22,4 +22,3 @@ if __name__ == "__main__":
     upd.name = "New Mexico"
     session.add(upd)
     session.commit()
-
