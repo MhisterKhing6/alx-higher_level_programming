@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-"""
-List the first states from the database
+"""Start link class to table in database
 """
 import sys
 from sqlalchemy.orm import sessionmaker
 
-from model_state import State
+from model_state import Base, State
 
 from sqlalchemy import (create_engine)
 
@@ -18,6 +17,6 @@ if __name__ == "__main__":
     )
     Session = sessionmaker(bind=engine)
     session = Session()
-    result = session.query(State).order_by(State.id).first()
-    if result:
-        print('{}: {}'.format(result.id, result.name))
+    result = session.query(State).order_by(State.id)
+    for instance in session.query(State).order_by(State.id):
+        print(f'{instance.id}: {instance.name}')
