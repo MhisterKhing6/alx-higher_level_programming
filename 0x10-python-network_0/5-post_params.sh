@@ -1,3 +1,3 @@
 #!/bin/bash
 #Create get the size of a page
-curl -F email=test@gmail.com -F subject='I will always be here for PLD' -s  "$1"
+curl -X POST -d email=test@gmail.com -d subject='I will always be here for PLD' -s  "$1"
