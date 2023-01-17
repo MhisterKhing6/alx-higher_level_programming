@@ -1,3 +1,3 @@
 #!/bin/bash
-#Create get the size of a page
-curl -X OPTIONS -s  "$1"
+# display all HTTP methods the server will accept using curl
+curl -si "$1" | awk -F ": " '/Allow/ {print $2}'
