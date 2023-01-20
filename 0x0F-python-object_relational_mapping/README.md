@@ -1,2 +1,1 @@
-Sql using python script. 
-MySQLdb and SqlAlchemy
+0x0F. Python - Object-relational mapping

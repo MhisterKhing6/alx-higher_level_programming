@@ -1,23 +1,27 @@
 #!/usr/bin/python3
-
 """
-    Python MySQLdb introduction
-    Select all states from the states database
-    where states name is equal to user inputs
+Script that takes in the name of a state as an argument and lists
+all cities of that state, using the database
 """
-if __name__ == '__main__':
-    import sys
-    import MySQLdb
 
-    # create a connection to database
-    connect = MySQLdb.connect(host='localhost', user=sys.argv[1],
-                              passwd=sys.argv[2], db=sys.argv[3], port=3036)
-    #  get a cursor
-    cursor = connect.cursor()
-    cursor.execute('''
-                   SELECT cities.name
-                   FROM cities inner join states
-                   ON states.id = cities.state_id AND states.name = BINARY %s
-                   ''', (sys.argv[4], ))
-    new = [x[0] for x in cursor.fetchall()]
-    print(', '.join(new))
+import MySQLdb
+from sys import argv
+
+if __name__ == "__main__":
+    db = MySQLdb.connect(host="localhost",
+                         user=argv[1], passwd=argv[2], db=argv[3])
+
+    db_cursor = db.cursor()
+
+    query = "SELECT cities.name\
+             FROM cities JOIN states\
+             ON cities.state_id = states.id\
+             WHERE states.name = %s"
+
+    db_cursor.execute(query, (argv[4], ))
+    cities = []
+    for city in db_cursor.fetchall():
+        cities.append(city[0])
+    print(", ".join(cities))
+    db_cursor.close()
+    db.close()

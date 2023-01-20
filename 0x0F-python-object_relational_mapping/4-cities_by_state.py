@@ -1,23 +1,23 @@
 #!/usr/bin/python3
-
 """
-    Python MySQLdb introduction
-    Select all states from the states database
+Script that Lists all cities from the database
 """
-if __name__ == '__main__':
-    import sys
-    import MySQLdb
 
-    # create a connection to database
-    connect = MySQLdb.connect(host='localhost', user=sys.argv[1],
-                              passwd=sys.argv[2], db=sys.argv[3], port=3036)
-    #  get a cursor
-    cursor = connect.cursor()
-    cursor.execute('''
-      SELECT cities.id, cities.name, states.name
-      FROM states inner join cities
-      ON states.id=cities.state_id
-       ''')
-    rows = cursor.fetchall()
-    for row in rows:
-        print(row)
+import MySQLdb
+from sys import argv
+
+if __name__ == "__main__":
+    db = MySQLdb.connect(host="localhost",
+                         user=argv[1], passwd=argv[2], db=argv[3])
+
+    cursor = db.cursor()
+    db_query = "SELECT cities.id, cities.name, states.name\
+             FROM cities JOIN states\
+             WHERE cities.state_id = states.id"
+    cursor.execute(db_query)
+
+    for state in cursor.fetchall():
+        print(state)
+
+    cursor.close()
+    db.close()

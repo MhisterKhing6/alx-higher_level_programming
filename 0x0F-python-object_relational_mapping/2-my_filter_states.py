@@ -1,23 +1,21 @@
 #!/usr/bin/python3
-
 """
-    Python MySQLdb introduction
-    Select all states from the states database
-    where states name is equal to user inputs
+Script that takes in an argument and displays all values in the states
+table of hbtn_0e_0_usa where name matches the argument
 """
-if __name__ == '__main__':
-    import sys
-    import MySQLdb
 
-    # create a connection to database
-    connect = MySQLdb.connect(host='localhost', user=sys.argv[1],
-                              passwd=sys.argv[2], db=sys.argv[3], port=3036)
-    #  get a cursor
-    cursor = connect.cursor()
-    cursor.execute('''
-                   SELECT * from states
-                   WHERE states.name = BINARY '{}'
-                   '''.format(sys.argv[4]))
-    rows = cursor.fetchall()
-    for row in rows:
-        print(row)
+import MySQLdb
+from sys import argv
+
+if __name__ == "__main__":
+    db = MySQLdb.connect(host="localhost",
+                         user=argv[1], passwd=argv[2], db=argv[3])
+    query = "SELECT * FROM states\
+             WHERE states.name LIKE BINARY '{}'\
+             ORDER BY states.id ASC".format(argv[4])
+    cursor = db.cursor()
+    cursor.execute(query)
+    for state in cursor.fetchall():
+        print(state)
+    cursor.close()
+    db.close()
