@@ -1,1 +1,0 @@
-Concept on javascript classes and objects

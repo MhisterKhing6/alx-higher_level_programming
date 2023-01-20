@@ -1,3 +1,3 @@
 #!/bin/bash
-#Create get the size of a page
-curl -X POST -d email=test@gmail.com -d subject='I will always be here for PLD' -s  "$1"
+# Script that sends a POST request and displays the body response
+curl -s "$1" -X POST -d "email=test@gmail.com&subject=I will always be here for PLD"

@@ -1,3 +1,3 @@
 #!/bin/bash
-#Create get the size of a page
-curl -w '%{size_download}' -s  "$1"
+# Get the byte size of the HTTP response header for a given URL.
+curl -s "$1" | wc -c
