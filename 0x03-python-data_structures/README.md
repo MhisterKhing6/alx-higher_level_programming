@@ -1,1 +1,3 @@
-Introduction to python data structures
+Directory containing all exercises in Python Data Structures
+
+ALX

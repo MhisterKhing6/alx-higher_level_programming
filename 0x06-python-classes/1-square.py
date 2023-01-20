@@ -1,10 +1,21 @@
 #!/usr/bin/python3
-"""Creates a square class and defines it using its base"""
+"""Define an object, Square."""
 
 
 class Square:
-    """A square class with bass as only form of definition"""
+    """ Object Square [class]. """
 
     def __init__(self, size):
-        """initialize to size variable"""
+        """ Initialize method.
+<<<<<<< HEAD
+
+=======
+>>>>>>> 0836a46f80f6c79ff9ac641d9cb0bd7d56dbf8c8
+        Args:
+            self (class): This class
+            size (int): Size of the square
+        """
+
+        """ Instance attribute
+        """
         self.__size = size
