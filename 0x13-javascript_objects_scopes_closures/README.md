@@ -1,1 +1,1 @@
-Concept on javascript classes and objects
+0x13. JavaScript - Objects, Scopes and Closures

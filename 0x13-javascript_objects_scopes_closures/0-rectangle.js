@@ -1,5 +1,4 @@
 #!/usr/bin/node
-// Creating an empty rectangle template
-class Rectangle {
-}
+
+class Rectangle {}
 module.exports = Rectangle;

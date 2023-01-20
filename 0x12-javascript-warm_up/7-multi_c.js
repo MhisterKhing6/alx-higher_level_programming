@@ -1,9 +1,11 @@
 #!/usr/bin/node
-import { argv } from 'node:process';
-if (Number(argv[2])) {
-  for (let i = 0; i < parseInt(argv[2]); i++) {
-    console.log('C is fun');
-  }
+
+const lang = 'C is fun';
+
+if (isNaN(process.argv[2])) {
+  console.log('Missing number of occurrences');
 } else {
-  console.log('Missing number of occurences');
+  for (let i = 0; i < parseInt(process.argv[2]); i++) {
+    console.log(lang);
+  }
 }

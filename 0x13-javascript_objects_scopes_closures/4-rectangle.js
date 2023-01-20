@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// Creating an empty rectangle template
+
 class Rectangle {
   constructor (w, h) {
     if (w > 0 && h > 0) {
@@ -15,14 +15,15 @@ class Rectangle {
   }
 
   rotate () {
-    const temp = this.height;
-    this.height = this.width;
-    this.width = temp;
+    const aux = this.width;
+    this.width = this.height;
+    this.height = aux;
   }
 
   double () {
-    this.height *= 2;
     this.width *= 2;
+    this.height *= 2;
   }
 }
+
 module.exports = Rectangle;

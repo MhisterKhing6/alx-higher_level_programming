@@ -1,9 +1,7 @@
 #!/usr/bin/node
-fs = require('fs');
-let fileread1 = " ";
 
-fs.readFile(process.argv[2], (err, data) => {
-    fileread1 += data.toString();
-});
-
-console.log(fileread1.toString());
+const args = process.argv.slice(2);
+const file = require('fs');
+const contentA = file.readFileSync('./' + args[0]);
+const contentB = file.readFileSync('./' + args[1]);
+file.writeFileSync('./' + args[2], contentA + contentB);

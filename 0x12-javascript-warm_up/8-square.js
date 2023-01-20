@@ -1,13 +1,9 @@
 #!/usr/bin/node
-import { argv } from 'node:process';
-if (Number(argv[2])) {
-  for (let i = 0; i < parseInt(argv[2]); i++) {
-    let x = '';
-    for (let j = 0; j < parseInt(argv[2]); j++) {
-      x += 'X';
-    }
-    console.log(x);
-  }
-} else {
+
+if (isNaN(process.argv[2])) {
   console.log('Missing size');
+} else {
+  for (let i = 0; i < parseInt(process.argv[2]); i++) {
+    console.log('X'.repeat(parseInt(process.argv[2])));
+  }
 }

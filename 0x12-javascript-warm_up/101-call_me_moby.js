@@ -1,6 +1,7 @@
 #!/usr/bin/node
-module.exports.callMeMoby = function (x, funct) {
-  for (let i = 0; i < Number(x); i++) {
-    funct();
+
+exports.callMeMoby = function (x, theFunction) {
+  for (let i = 0; i < x; i++) {
+    theFunction();
   }
 };

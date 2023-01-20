@@ -1,7 +1,6 @@
 #!/usr/bin/node
-import { argv } from 'node:process';
-function add (a, b) {
-  console.log(Number(a) + Number(b));
-}
 
-add(argv[2], argv[3]);
+function add (a, b) {
+  return parseInt(a) + parseInt(b);
+}
+console.log(add(process.argv[2], process.argv[3]));

@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// Creating an empty rectangle template
+
 class Rectangle {
   constructor (w, h) {
     if (w > 0 && h > 0) {

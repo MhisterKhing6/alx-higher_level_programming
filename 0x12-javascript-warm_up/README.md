@@ -1,1 +1,1 @@
-introduction to Java Script
+0x12. JavaScript - Warm up

@@ -1,11 +1,10 @@
 #!/usr/bin/node
-import { argv } from 'node:process';
-function factorial (a) {
-  if (Number(a) === 0 || isNaN(a)) {
+
+function factorial (FacNum) {
+  if (FacNum === 0 || !Number(FacNum)) {
     return 1;
   } else {
-    return Number(a) * factorial(Number(a) - 1);
+    return FacNum * factorial(FacNum - 1);
   }
 }
-
-console.log(factorial(argv[2]));
+console.log(factorial(Number(process.argv[2])));
