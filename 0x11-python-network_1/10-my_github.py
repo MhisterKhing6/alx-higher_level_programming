@@ -13,3 +13,5 @@ if __name__ == "__main__":
             print(req_json_rep.get("id", "None"))
         except ValueError as err:
             pass
+        except requests.exceptions.JSONDecodeError as e:
+            pass
