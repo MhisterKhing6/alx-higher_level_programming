@@ -10,6 +10,6 @@ if __name__ == "__main__":
     if r.status_code < 400:
         try:
             db = r.json()
-            print(db.get('id'))
+            print(db.get('id', "None"))
         except ValueError as err:
             pass
