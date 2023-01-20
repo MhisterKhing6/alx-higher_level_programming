@@ -1,16 +1,21 @@
 #!/usr/bin/python3
-"""  Deal with a json data  """
+"""script that takes in a letter and sends a POST request to
+http://0.0.0.0:5000/search_user with the letter as a parameter."""
+
 import requests
 import sys
+
+
 if __name__ == "__main__":
-    val = sys.argv[2] if sys.argv[2] else ""
-    r = requests.get(sys.argv[1], {'q': val})
+    lett = "" if len(sys.argv) == 1 else sys.argv[1]
+    payload = {"q": lett}
+
+    r = requests.post("http://0.0.0.0:5000/search_user", data=payload)
     try:
-        if r.status_code < 400:
-            print('[{}] <{}>'.format(r.json()['id']),
-                  r.json()['name'])
-    except requests.exceptions.JSONDecodeError as e:
-        if r.status_code == 204:
+        response = r.json()
+        if response == {}:
             print("No result")
         else:
-            print("Not a valid JSON")
+            print("[{}] {}".format(response.get("id"), response.get("name")))
+    except ValueError:
+        print("Not a valid JSON")
