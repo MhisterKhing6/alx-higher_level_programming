@@ -1,1 +1,1 @@
-Python Modules and imports
+All exercises on using modules in Python

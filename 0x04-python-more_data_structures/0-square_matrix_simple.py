@@ -1,12 +1,6 @@
 #!/usr/bin/python3
-"""Square the matrix"""
-
-
 def square_matrix_simple(matrix=[]):
-    matrix2 = []
-    for row in matrix:
-        temp = []
-        for value in row:
-            temp.append(value**2)
-        matrix2.append(temp)
-    return matrix2
+    dup_matrix = matrix.copy()
+    for line in range(len(matrix)):
+        dup_matrix[line] = list(map((lambda x: x**2), matrix[line]))
+    return(dup_matrix)
