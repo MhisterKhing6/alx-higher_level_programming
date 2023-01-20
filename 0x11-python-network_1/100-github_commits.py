@@ -16,3 +16,5 @@ if __name__ == "__main__":
                                       get('author').get('name')))
         except Exception as er:
             pass
+    else:
+        print("None")
