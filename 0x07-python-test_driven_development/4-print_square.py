@@ -1,11 +1,19 @@
 #!/usr/bin/python3
+"""
+Module 4-print_square
+Contain one method that the size must be integr and greater than zero
+Print square with the character #
+"""
+
+
 def print_square(size):
-    if type(size) != int or (type(size) == float and size < 0):
+    """Print square with character #"""
+    if type(size) is not int:
         raise TypeError("size must be an integer")
-    if size < 0:
+    elif size < 0:
         raise ValueError("size must be >= 0")
+    elif type(size) is float and size < 0:
+        raise TypeError("size must be an integer")
     else:
-        for i in range(size):
-            for j in range(size):
-                print("#", end="")
-            print()
+        message = "\n".join(["#" * size for i in range(size)])
+        print(message)
